@@ -1,0 +1,473 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Porcelain Tile Dallas | Kiva Stone & Tile</title>
+  
+  <meta name="description" content="Explore porcelain tile collections and design directions. Visit Kiva in Carrollton to discuss your palette and browse Puccini tile inventory.">
+  <meta name="keywords" content="Porcelain Tile, Marble Look Porcelain, Stone Look Porcelain, Concrete Look Porcelain, Wood Look Porcelain, Puccini Tile">
+  <meta name="robots" content="index, follow">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=DM+Sans:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --cream: #f4f1e9;
+      --cream-light: #faf9f5;
+      --ink: #242722;
+      --green: #1e2922;
+      --muted: #77786f;
+      --line: #d9d6cd;
+      --line-subtle: #e6e3da;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { background: var(--cream); color: var(--ink); font-family: 'DM Sans', sans-serif; font-size: 13.5px; line-height: 1.6; overflow-x: hidden; }
+    a { color: inherit; text-decoration: none; transition: opacity .2s; }
+    a:hover { opacity: .75; }
+
+    /* TOP ANNOUNCEMENT BAR */
+    .top-bar { background: var(--green); color: #e5e8e1; font-size: 10.5px; letter-spacing: .16em; text-transform: uppercase; padding: 8px 5%; display: flex; justify-content: center; gap: 16px; }
+    .top-bar a { color: #fff; }
+    .top-bar a:hover { text-decoration: underline; }
+
+    /* SITE HEADER */
+    .site-header { height: 84px; padding: 0 4.5%; display: flex; align-items: center; justify-content: space-between; background: var(--cream); position: sticky; top: 0; z-index: 100; border-bottom: 1px solid rgba(40,40,30,.1); }
+    .logo-container { display: flex; flex-direction: column; line-height: 1; }
+    .logo-crest { font-size: 11px; letter-spacing: .2em; color: var(--ink); margin-bottom: 2px; }
+    .logo-title { font-family: 'Cinzel', serif; font-size: 26px; letter-spacing: .22em; font-weight: 600; }
+    .logo-sub { font-size: 7.5px; letter-spacing: .35em; text-transform: uppercase; color: var(--muted); margin-top: 3px; font-weight: 500; }
+
+    .main-nav { display: flex; align-items: center; gap: 28px; font-size: 13px; }
+    .main-nav b { font-size: 9px; color: #888; }
+    .drop { position: relative; padding: 26px 0; }
+    .drop-menu { display: none; position: absolute; top: 76px; left: -16px; min-width: 250px; background: var(--cream-light); padding: 12px 18px; box-shadow: 0 16px 36px rgba(0,0,0,.08); border: 1px solid var(--line); z-index: 101; }
+    .drop-menu a.drop-item-link { display: block; padding: 10px 0; border-bottom: 1px solid rgba(0,0,0,.06); }
+    .drop-menu a.drop-item-link:last-child { border-bottom: none; }
+    .drop-item-title-row { display: flex; justify-content: space-between; align-items: center; font-size: 13px; font-weight: 500; color: var(--ink); }
+    .drop-item-sub { display: block; font-size: 10.5px; color: var(--muted); margin-top: 3px; font-weight: 400; }
+    .drop-menu a.simple-link { display: flex; justify-content: space-between; align-items: center; padding: 9px 0; border-bottom: 1px solid rgba(0,0,0,.06); font-size: 12px; }
+    .drop-menu a.simple-link:last-child { border-bottom: none; }
+    .drop:hover .drop-menu { display: block; }
+
+    .header-right { display: flex; align-items: center; gap: 20px; }
+    .header-icons { display: flex; align-items: center; gap: 16px; }
+    .icon-btn { background: none; border: none; font-size: 16px; color: var(--ink); display: inline-flex; align-items: center; gap: 4px; cursor: pointer; text-decoration: none; }
+    .visit-btn { font-size: 12px; border-bottom: 1px solid var(--ink); padding-bottom: 3px; margin-left: 4px; white-space: nowrap; }
+
+    /* HAMBURGER BUTTON */
+    .mobile-menu-btn { display: none; flex-direction: column; justify-content: center; gap: 5px; cursor: pointer; padding: 6px; margin-left: 6px; }
+    .mobile-menu-btn span { display: block; width: 22px; height: 2px; background: var(--ink); }
+
+    /* MOBILE DRAWER */
+    .mobile-nav-drawer { position: fixed; inset: 0; background: #faf8f2; z-index: 99999; padding: 35px 28px; display: flex; flex-direction: column; opacity: 0; visibility: hidden; transition: opacity 0.25s ease, visibility 0.25s ease; }
+    .mobile-nav-drawer:target { opacity: 1; visibility: visible; }
+    .mobile-nav-close { align-self: flex-end; font-size: 26px; line-height: 1; color: var(--ink); margin-bottom: 26px; }
+    .mobile-nav-links { display: flex; flex-direction: column; gap: 18px; }
+    .mobile-nav-links a { font-size: 18px; font-family: 'Playfair Display', Georgia, serif; color: var(--ink); border-bottom: 1px solid var(--line-subtle); padding-bottom: 10px; }
+    .mobile-nav-links a.mobile-highlight { font-family: 'DM Sans', sans-serif; font-size: 12px; text-transform: uppercase; letter-spacing: 0.1em; font-weight: 600; color: var(--green); border-bottom: none; margin-top: 6px; }
+
+    /* PAGE HERO */
+    .page-hero { padding: 55px 7% 35px; }
+    .breadcrumb { font-size: 11px; color: var(--muted); margin-bottom: 32px; display: block; }
+    .breadcrumb a { color: var(--muted); }
+    .hero-eyebrow { font-size: 9.5px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--muted); margin-bottom: 12px; display: block; font-weight: 500; }
+    .hero-title { font-family: 'Playfair Display', Georgia, serif; font-size: clamp(42px, 6vw, 76px); line-height: 1.05; font-weight: 400; margin-bottom: 22px; }
+    .hero-desc { max-width: 650px; color: var(--muted); line-height: 1.8; font-size: 14px; margin-bottom: 10px; }
+
+    /* FILTER SECTION */
+    .filter-section { padding: 20px 7% 35px; background: var(--cream-light); border-bottom: 1px solid var(--line-subtle); }
+    .filter-top-desc { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; font-size: 13px; color: var(--muted); }
+    .view-inventory-link { font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; border-bottom: 1px solid var(--ink); padding-bottom: 2px; }
+    
+    .filter-grid { display: grid; grid-template-columns: 2fr 1.2fr auto auto; gap: 20px; align-items: end; }
+    .filter-group label { display: block; font-size: 9.5px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--muted); margin-bottom: 8px; font-weight: 600; }
+    .filter-input, .filter-select { width: 100%; background: #fff; border: 1px solid var(--line); padding: 12px 16px; font-size: 13.5px; font-family: inherit; color: var(--ink); outline: none; }
+    .filter-reset-link { font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; border-bottom: 1px solid var(--ink); padding-bottom: 2px; }
+    .catalog-count-label { font-size: 12px; color: var(--muted); }
+
+    /* STONE GRID (4 COLUMNS) */
+    .collections-section { padding: 50px 7% 80px; }
+    .stone-grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 26px; margin-bottom: 50px; }
+    .stone-card { display: block; background: #fff; border: 1px solid var(--line-subtle); padding: 14px; transition: transform 0.3s ease, box-shadow 0.3s ease; }
+    .stone-card:hover { transform: translateY(-4px); box-shadow: 0 12px 30px rgba(0,0,0,0.06); }
+    .stone-card-img { height: 220px; background: #e8e4dc; overflow: hidden; margin-bottom: 14px; display: flex; align-items: center; justify-content: center; }
+    .stone-card-img img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.6s ease; }
+    .stone-card:hover .stone-card-img img { transform: scale(1.04); }
+    
+    .stone-meta-tag { font-size: 9px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted); margin-bottom: 6px; display: block; font-weight: 600; }
+    .stone-card h3 { font-family: 'Playfair Display', Georgia, serif; font-size: 18px; font-weight: 400; margin-bottom: 6px; color: var(--ink); }
+    .stone-card-sub { font-size: 11px; color: var(--muted); line-height: 1.5; margin-bottom: 10px; }
+    .stone-card-footer { display: flex; justify-content: space-between; align-items: center; font-size: 11.5px; font-weight: 600; color: var(--green); border-top: 1px solid var(--line-subtle); padding-top: 10px; }
+
+    /* DISCLAIMER BOX */
+    .info-disclaimer-box { background: var(--cream-light); border: 1px solid var(--line); padding: 25px 30px; margin-bottom: 70px; font-size: 13px; color: var(--muted); line-height: 1.7; }
+
+    /* ASK SECTION BANNER */
+    .ask-section-banner { display: grid; grid-template-columns: 1.5fr 1fr; gap: 40px; align-items: center; padding-top: 20px; border-top: 1px solid var(--line-subtle); }
+    .ask-section-banner h2 { font-family: 'Playfair Display', Georgia, serif; font-size: clamp(32px, 3.5vw, 46px); font-weight: 400; margin-bottom: 12px; }
+    .ask-section-banner p { color: var(--muted); font-size: 14px; }
+    .btn-dark { background: var(--green); color: #fff; padding: 15px 28px; font-size: 11.5px; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 600; display: inline-flex; align-items: center; gap: 6px; }
+    .btn-dark:hover { background: #26372e; color: #fff; opacity: 1; }
+
+    /* SEARCH MODAL */
+    .popup-modal-overlay { position: fixed; inset: 0; background: rgba(30, 41, 34, 0.65); backdrop-filter: blur(4px); z-index: 999999; display: flex; align-items: center; justify-content: center; padding: 20px; opacity: 0; visibility: hidden; transition: opacity 0.25s ease, visibility 0.25s ease; }
+    .popup-modal-overlay:target { opacity: 1; visibility: visible; }
+    .popup-modal-box { background: #faf8f2; width: 100%; max-width: 620px; padding: 45px 50px; position: relative; box-shadow: 0 24px 60px rgba(0,0,0,0.25); border: 1px solid var(--line); }
+    .modal-close-btn { position: absolute; top: 24px; right: 28px; font-size: 22px; color: var(--ink); line-height: 1; text-decoration: none; font-weight: 300; }
+    .modal-eyebrow { font-size: 9.5px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--muted); display: block; margin-bottom: 12px; font-weight: 600; }
+    .popup-modal-box h2 { font-family: 'Playfair Display', Georgia, serif; font-size: clamp(34px, 4vw, 46px); font-weight: 400; margin-bottom: 24px; color: var(--ink); line-height: 1.15; }
+    .modal-field-label { font-size: 11px; font-weight: 600; color: var(--ink); display: block; margin-bottom: 8px; }
+    .modal-input-wrap { border: 1px solid #7c8877; background: #ffffff; padding: 14px 18px; margin-bottom: 16px; }
+    .modal-input-wrap input { width: 100%; border: none; background: none; outline: none; font-size: 14px; font-family: inherit; color: var(--ink); }
+    .modal-submit-btn { width: 100%; background: #191c19; color: #ffffff; padding: 16px; font-size: 12px; letter-spacing: 0.08em; font-weight: 600; text-transform: uppercase; border: none; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 8px; }
+    .modal-submit-btn:hover { background: #26372e; }
+
+    /* GREEN FOOTER STYLES */
+    .footer { background: var(--green); color: #edebe4; padding: 70px 6% 30px; }
+    .footer-header-row { display: grid; grid-template-columns: 1.2fr 1.6fr 1.2fr; gap: 30px; align-items: start; padding-bottom: 45px; border-bottom: 1px solid rgba(255, 255, 255, 0.08); }
+    .brand-crest-svg { color: #edebe4; margin-bottom: 6px; }
+    .footer-kiva-logo { font-family: 'Cinzel', serif; font-size: 30px; letter-spacing: 0.22em; line-height: 1; color: #ffffff; font-weight: 500; }
+    .footer-kiva-sub { font-family: 'DM Sans', sans-serif; font-size: 8px; letter-spacing: 0.35em; color: #9fa499; margin-top: 4px; }
+    .footer-tagline-box .footer-tagline { font-family: 'Playfair Display', Georgia, serif; font-size: clamp(24px, 2.3vw, 34px); line-height: 1.25; font-weight: 400; color: #ffffff; margin: 0; }
+    .footer-convo-box { text-align: right; }
+    .footer-eyebrow { font-size: 9.5px; letter-spacing: 0.2em; text-transform: uppercase; color: #9fa499; margin-bottom: 14px; display: block; font-weight: 600; }
+    .footer-text-link { display: inline-block; border-bottom: 1px solid #ffffff; color: #ffffff; padding-bottom: 4px; font-size: 11.5px; letter-spacing: 0.08em; text-transform: uppercase; margin-top: 6px; }
+
+    .footer-mid-grid { display: grid; grid-template-columns: 1.2fr 1.6fr 1.2fr; gap: 30px; padding: 35px 0; }
+    .footer-mid-grid p { font-size: 12px; line-height: 1.85; color: #c9cebe; }
+
+    .footer-nav-grid { display: grid; grid-template-columns: 1.2fr 1.6fr 1.2fr; gap: 30px; padding-bottom: 45px; }
+    .footer-nav-grid a { display: block; font-size: 12px; margin: 8px 0; color: #c9cebe; }
+    .footer-nav-grid a:hover { color: #ffffff; }
+    .newsletter-sub { font-size: 12px; color: #c9cebe; margin-bottom: 16px; }
+    .newsletter-form { position: relative; border-bottom: 1px solid rgba(255, 255, 255, 0.35); padding-bottom: 8px; display: flex; justify-content: space-between; }
+    .newsletter-form input { background: none; border: none; color: #ffffff; font-size: 12px; width: 85%; outline: none; font-family: inherit; }
+    .newsletter-form button { background: none; border: none; color: #ffffff; cursor: pointer; font-size: 14px; }
+    .newsletter-note { font-size: 9.5px; color: #83887d; margin-top: 8px; }
+
+    /* ASSOCIATIONS BAR */
+    .associations-bar { border-top: 1px solid rgba(255, 255, 255, 0.12); border-bottom: 1px solid rgba(255, 255, 255, 0.12); padding: 30px 0; display: flex; align-items: center; justify-content: space-between; gap: 30px; }
+    .assoc-label span { display: block; font-size: 9.5px; letter-spacing: 0.22em; color: #ffffff; font-weight: 600; }
+    .assoc-label small { font-size: 9px; color: #8e9488; letter-spacing: 0.05em; }
+    .association-logos { display: flex; align-items: center; justify-content: space-between; flex-grow: 1; max-width: 880px; gap: 25px; color: #d1d5c9; }
+    .assoc-item { display: flex; align-items: center; opacity: 0.88; }
+    .assoc-svg { height: 36px; width: auto; display: block; }
+
+    .footer-bottom-row { display: flex; justify-content: space-between; align-items: center; padding-top: 24px; font-size: 10px; color: #8e9488; border-top: 1px solid rgba(255, 255, 255, 0.1); }
+    .footer-bottom-row a { color: #8e9488; text-decoration: underline; }
+
+    @media (max-width: 1024px) {
+      .stone-grid-4 { grid-template-columns: repeat(2, 1fr); }
+      .filter-grid { grid-template-columns: 1fr; }
+      .ask-section-banner { grid-template-columns: 1fr; gap: 25px; }
+    }
+    @media (max-width: 768px) {
+      .main-nav { display: none; }
+      .mobile-menu-btn { display: flex; }
+      .stone-grid-4 { grid-template-columns: 1fr; }
+      .footer-header-row, .footer-mid-grid, .footer-nav-grid { grid-template-columns: 1fr; gap: 24px; }
+      .footer-convo-box { text-align: left; }
+      .associations-bar { flex-direction: column; align-items: flex-start; }
+      .association-logos { flex-wrap: wrap; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- TOP BAR -->
+  <div class="top-bar">
+    <span>A WORLD OF EXTRAORDINARY SURFACES</span>
+    <span>•</span>
+    <a href="collections.html">Discover the Kiva collection ↗</a>
+  </div>
+
+  <!-- SITE HEADER -->
+  <header class="site-header">
+    <a class="logo-container" href="index.html">
+      <span class="logo-crest">𓃑 𓃰 𓃑</span>
+      <span class="logo-title">KIVA</span>
+      <span class="logo-sub">STONE</span>
+    </a>
+
+    <nav class="main-nav">
+      <a href="collections.html" style="font-weight:600;">Collections <b>⌄</b></a>
+      <div class="drop">
+        <a href="inventory.html">Inventory <b>⌄</b></a>
+        <div class="drop-menu">
+          <a class="drop-item-link" href="https://kivastone.stoneprofitsweb.com/" target="_blank" rel="noopener">
+            <div class="drop-item-title-row"><span>Slabs</span><span>↗</span></div>
+            <span class="drop-item-sub">Kiva live slab inventory</span>
+          </a>
+          <a class="drop-item-link" href="https://puccini.stoneprofitsweb.com/" target="_blank" rel="noopener">
+            <div class="drop-item-title-row"><span>Tiles</span><span>↗</span></div>
+            <span class="drop-item-sub">Puccini live tile inventory</span>
+          </a>
+        </div>
+      </div>
+      <div class="drop">
+        <a href="brands.html">Brands <b>⌄</b></a>
+        <div class="drop-menu">
+          <a class="simple-link" href="brands.html">All Brands</a>
+          <a class="simple-link" href="https://puccinistone.com/" target="_blank" rel="noopener">Puccini ↗</a>
+          <a class="simple-link" href="https://duratileus.com/" target="_blank" rel="noopener">Duratile ↗</a>
+        </div>
+      </div>
+      <a href="specials.html">Specials</a>
+    </nav>
+
+    <div class="header-right">
+      <div class="header-icons">
+        <a href="#searchModal" class="icon-btn" title="Search">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        </a>
+        <a href="#wishlistModal" class="icon-btn" title="Favorites" style="display:inline-flex; align-items:center; color:var(--ink);">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+          <span style="font-size:9.5px; margin-left:3px; font-weight:500; position:relative; top:-4px;">0</span>
+        </a>
+      </div>
+      <a class="visit-btn" href="showroom.html">Visit Our Showroom ↗</a>
+      <a href="#mobileMenu" class="mobile-menu-btn" aria-label="Open Navigation"><span></span><span></span><span></span></a>
+    </div>
+  </header>
+
+  <!-- MOBILE DRAWER -->
+  <div id="mobileMenu" class="mobile-nav-drawer">
+    <a href="#" class="mobile-nav-close" aria-label="Close Menu">✕</a>
+    <div class="mobile-nav-links">
+      <a href="collections.html">Collections</a>
+      <a href="inventory.html">Inventory</a>
+      <a href="brands.html">Brands</a>
+      <a href="specials.html">Specials</a>
+      <a href="showroom.html" class="mobile-highlight">Visit Our Showroom ↗</a>
+    </div>
+  </div>
+
+  <main>
+    <!-- PAGE HERO -->
+    <section class="page-hero">
+      <span class="breadcrumb"><a href="index.html">Home</a> / <a href="collections.html">Collections</a> / Porcelain Tile</span>
+      <span class="hero-eyebrow">TILE</span>
+      <h1 class="hero-title">Porcelain Tile Collection</h1>
+      <p class="hero-desc">Explore porcelain tile collections and design directions. Visit Kiva in Carrollton to discuss your palette and browse Puccini tile inventory.</p>
+    </section>
+
+    <!-- FILTER SECTION -->
+    <section class="filter-section">
+      <div class="filter-top-desc">
+        <span>Explore named varieties and design directions in the collection. Click a material to view its own page, or ask our team about a name you do not see.</span>
+        <a href="https://puccini.stoneprofitsweb.com/" class="view-inventory-link" target="_blank" rel="noopener">View Tile Inventory ↗</a>
+      </div>
+      <div class="filter-grid">
+        <div class="filter-group">
+          <label for="searchTile">Search porcelain tile by name</label>
+          <input type="text" id="searchTile" class="filter-input" placeholder="Search porcelain tile by name">
+        </div>
+        <div class="filter-group">
+          <label for="filterStyle">All design directions</label>
+          <select id="filterStyle" class="filter-select">
+            <option value="">All design directions</option>
+            <option value="Marble">Marble look</option>
+            <option value="Stone">Stone look</option>
+            <option value="Concrete">Concrete look</option>
+            <option value="Wood">Wood look</option>
+          </select>
+        </div>
+        <div style="display: flex; align-items: flex-end; gap: 15px;">
+          <a href="#" class="filter-reset-link">Reset</a>
+          <span class="catalog-count-label">4 selections</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- TILE FAMILIES GRID (4 COLUMNS) -->
+    <section class="collections-section">
+      <div class="stone-grid-4">
+
+        <a class="stone-card" href="porcelain-tile-product-detail.html?name=Marble+Look+Porcelain+Tile&dir=Design+Direction">
+          <div class="stone-card-img"><img src="marble.jpg" alt="Marble Look Porcelain Tile"></div>
+          <span class="stone-meta-tag">Category Reference</span>
+          <h3>Marble Look Porcelain Tile</h3>
+          <p class="stone-card-sub">Porcelain tile · Design direction</p>
+          <div class="stone-card-footer"><span>View Details</span><span>↗</span></div>
+        </a>
+
+        <a class="stone-card" href="porcelain-tile-product-detail.html?name=Stone+Look+Porcelain+Tile&dir=Design+Direction">
+          <div class="stone-card-img"><img src="quartzite.jpg" alt="Stone Look Porcelain Tile"></div>
+          <span class="stone-meta-tag">Category Reference</span>
+          <h3>Stone Look Porcelain Tile</h3>
+          <p class="stone-card-sub">Porcelain tile · Design direction</p>
+          <div class="stone-card-footer"><span>View Details</span><span>↗</span></div>
+        </a>
+
+        <a class="stone-card" href="porcelain-tile-product-detail.html?name=Concrete+Look+Porcelain+Tile&dir=Design+Direction">
+          <div class="stone-card-img"><img src="granite.jpg" alt="Concrete Look Porcelain Tile"></div>
+          <span class="stone-meta-tag">Category Reference</span>
+          <h3>Concrete Look Porcelain Tile</h3>
+          <p class="stone-card-sub">Porcelain tile · Design direction</p>
+          <div class="stone-card-footer"><span>View Details</span><span>↗</span></div>
+        </a>
+
+        <a class="stone-card" href="porcelain-tile-product-detail.html?name=Wood+Look+Porcelain+Tile&dir=Design+Direction">
+          <div class="stone-card-img"><img src="dolomite.jpg" alt="Wood Look Porcelain Tile"></div>
+          <span class="stone-meta-tag">Category Reference</span>
+          <h3>Wood Look Porcelain Tile</h3>
+          <p class="stone-card-sub">Porcelain tile · Design direction</p>
+          <div class="stone-card-footer"><span>View Details</span><span>↗</span></div>
+        </a>
+
+      </div>
+
+      <div class="info-disclaimer-box">
+        Collection discovery is separate from live stock. This sample includes illustrative category imagery and a starter selection of named materials, not an exhaustive worldwide database. Ask Kiva about sourcing and availability.
+      </div>
+
+      <div class="ask-section-banner">
+        <div>
+          <span class="hero-eyebrow" style="margin-bottom:8px; display:block;">LOOKING FOR SOMETHING SPECIFIC?</span>
+          <h2>Your material. Your next conversation.</h2>
+          <p>Share a product name, reference photo, or project brief with our team.</p>
+        </div>
+        <div>
+          <a href="https://43ey6h.share-na2.hsforms.com/2MY3neRzUQuWjtEmpmne2hQ" target="_blank" rel="noopener" class="btn-dark">Ask About Porcelain Tile ↗</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- SEARCH MODAL -->
+  <div id="searchModal" class="popup-modal-overlay">
+    <div class="popup-modal-box">
+      <a href="#" class="modal-close-btn" aria-label="Close Modal">✕</a>
+      <span class="modal-eyebrow">EXPLORE KIVA</span>
+      <h2>What inspires you?</h2>
+      <form action="porcelain-tile-collection.html" method="GET">
+        <label class="modal-field-label" for="siteSearch">Find a material</label>
+        <div class="modal-input-wrap">
+          <input type="text" id="siteSearch" name="q" placeholder="Try Marble Look Porcelain Tile..." required>
+        </div>
+        <button type="submit" class="modal-submit-btn">Search Materials ↗</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- GREEN FOOTER -->
+  <footer class="footer">
+    <div class="footer-header-row">
+      <div class="brand-crest-svg">
+        <svg width="42" height="22" viewBox="0 0 100 48" fill="currentColor">
+          <path d="M12 14c-2 0-3 2-3 4s1 4 3 4 3-2 3-4-1-4-3-4zm0-6c-3 0-5 2-5 5s2 5 5 5 5-2 5-5-2-5-5-5zm76 6c-2 0-3 2-3 4s1 4 3 4 3-2 3-4-1-4-3-4zm0-6c-3 0-5 2-5 5s2 5 5 5 5-2 5-5-2-5-5-5zM38 10h24v4H38zm4 8h16v4H42zm-8 10h32v4H34z"/>
+          <circle cx="50" cy="20" r="16" fill="none" stroke="currentColor" stroke-width="2"/>
+        </svg>
+      </div>
+      <div class="footer-kiva-logo">KIVA</div>
+      <div class="footer-kiva-sub">STONE</div>
+    </div>
+    <div class="footer-tagline-box">
+      <h2 class="footer-tagline">Extraordinary surfaces.<br>Endless possibility.</h2>
+    </div>
+    <div class="footer-convo-box">
+      <span class="footer-eyebrow">LET'S CREATE SOMETHING EXCEPTIONAL</span>
+      <a class="footer-text-link" href="https://43ey6h.share-na2.hsforms.com/2MY3neRzUQuWjtEmpmne2hQ" target="_blank" rel="noopener">Start a conversation ↗</a>
+    </div>
+
+    <div class="footer-mid-grid">
+      <div>
+        <span class="footer-eyebrow">VISIT KIVA STONE & TILE</span>
+        <p>1135 W Trinity Mills Rd, #100<br>Carrollton, TX 75006</p>
+      </div>
+      <div>
+        <span class="footer-eyebrow">CALL OUR TEAM</span>
+        <p><a href="tel:+19728035002" style="font-size:15px; letter-spacing:0.04em;">(972) 803-5002</a></p>
+      </div>
+      <div>
+        <span class="footer-eyebrow">SHOWROOM HOURS</span>
+        <p>Monday–Friday: 8:30 AM–5:00 PM<br>Saturday: 9:00 AM–2:00 PM<br>Sunday: Closed</p>
+      </div>
+    </div>
+
+    <div class="footer-nav-grid">
+      <div>
+        <span class="footer-eyebrow">EXPLORE</span>
+        <a href="collections.html">Our collections</a>
+        <a href="brands.html">Our brands</a>
+        <a href="specials.html">Specials</a>
+      </div>
+      <div>
+        <span class="footer-eyebrow">WORK WITH KIVA</span>
+        <a href="customers.html">Customers</a>
+        <a href="showroom.html">Visit the showroom</a>
+      </div>
+      <div>
+        <span class="footer-eyebrow">THE NEXT GREAT FIND</span>
+        <p class="newsletter-sub">New materials. Fresh inspiration. In your inbox.</p>
+        <form class="newsletter-form" action="https://43ey6h.share-na2.hsforms.com/2MY3neRzUQuWjtEmpmne2hQ" method="GET" target="_blank">
+          <input type="email" placeholder="Your email address" required>
+          <button type="submit" aria-label="Subscribe">↗</button>
+        </form>
+        <p class="newsletter-note">Sample signup. No subscription will be sent.</p>
+      </div>
+    </div>
+
+    <!-- ASSOCIATIONS BAR -->
+    <div class="associations-bar">
+      <div class="assoc-label"><span>ASSOCIATIONS</span><small>Industry resources</small></div>
+      <div class="association-logos">
+        <div class="assoc-item" title="American Society of Interior Designers">
+          <svg class="assoc-svg" viewBox="0 0 160 55" fill="currentColor">
+            <text x="0" y="16" font-size="10" font-family="'DM Sans',sans-serif">AMERICAN</text>
+            <text x="0" y="27" font-size="10" font-family="'DM Sans',sans-serif">SOCIETY OF</text>
+            <text x="0" y="38" font-size="10" font-family="'DM Sans',sans-serif">INTERIOR</text>
+            <text x="0" y="49" font-size="10" font-family="'DM Sans',sans-serif">DESIGNERS</text>
+            <path d="M100 4 L145 16 L145 52 L100 52 Z" fill="none" stroke="currentColor" stroke-width="2.5"/>
+            <text x="106" y="45" font-size="34" font-weight="900" font-family="Georgia, serif">AS</text>
+            <text x="135" y="45" font-size="34" font-weight="900" font-family="Georgia, serif">ID</text>
+          </svg>
+        </div>
+        <div class="assoc-item" title="National Kitchen & Bath Association">
+          <svg class="assoc-svg" viewBox="0 0 130 50" fill="currentColor">
+            <text x="0" y="36" font-size="34" font-weight="900" font-family="'DM Sans',sans-serif">NKBA</text>
+            <text x="96" y="22" font-size="7" font-weight="700">NATIONAL</text>
+            <text x="96" y="30" font-size="7" font-weight="700">KITCHEN+BATH</text>
+            <text x="96" y="38" font-size="7" font-weight="700">ASSOCIATION</text>
+          </svg>
+        </div>
+        <div class="assoc-item" title="International Interior Design Association">
+          <svg class="assoc-svg" viewBox="0 0 150 50" fill="currentColor">
+            <line x1="0" y1="36" x2="140" y2="36" stroke="currentColor" stroke-width="1.5"/>
+            <text x="10" y="30" font-size="32" font-family="'Playfair Display',serif" letter-spacing="0.25em">IIDA</text>
+            <text x="6" y="46" font-size="7">INTERNATIONAL</text>
+            <text x="70" y="46" font-size="7">DESIGN</text>
+          </svg>
+        </div>
+        <div class="assoc-item" title="Natural Stone Institute">
+          <svg class="assoc-svg" viewBox="0 0 150 50" fill="currentColor">
+            <polygon points="5,44 5,20 28,10 42,16 42,44" fill="currentColor" opacity="0.9"/>
+            <text x="52" y="24" font-size="11" font-weight="700">NATURAL</text>
+            <text x="52" y="35" font-size="11" font-weight="700">STONE</text>
+            <text x="52" y="45" font-size="8">INSTITUTE</text>
+          </svg>
+        </div>
+        <div class="assoc-item" title="National Association of the Remodeling Industry">
+          <svg class="assoc-svg" viewBox="0 0 120 50" fill="currentColor">
+            <path d="M8 20 L25 5 L42 20 Z" fill="none" stroke="currentColor" stroke-width="2.5"/>
+            <text x="0" y="44" font-size="28" font-weight="900" font-family="'DM Sans',sans-serif">NARI</text>
+            <text x="52" y="32" font-size="6.5">Remodeling Done Right.™</text>
+          </svg>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom-row">
+      <span>© 2026 Kiva Stone & Tile</span>
+      <span>Website concept · Realtime StoneProfits inventory integration</span>
+      <a href="index.html">About this sample</a>
+    </div>
+  </footer>
+
+</body>
+</html>
